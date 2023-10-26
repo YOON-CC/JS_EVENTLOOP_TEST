@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript EventLoop</title>
+</head>
+<body>
+  <script>
+    console.log("Start");
+
+    setTimeout(function () {
+      console.log("setTimeout Callback");
+    }, 0);
+
+    Promise.resolve().then(function () {
+      console.log("Promise Callback");
+    });
+
+    console.log("End");
+  </script>
+</body>
+</html>
